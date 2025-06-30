@@ -1,4 +1,4 @@
-package Java_Basics.Inches_to_centimeters;
+package Java_Basics.Inches_to_Centimeters;
 import java.util.Scanner;
 
 public class Main {

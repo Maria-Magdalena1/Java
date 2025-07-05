@@ -11,7 +11,7 @@ public class Main {
 
         double money=0;
         double countGames=0;
-        double total=0;
+        double total;
         for(int i=1;i<=age;i++)
         {
             if(i%2==0)

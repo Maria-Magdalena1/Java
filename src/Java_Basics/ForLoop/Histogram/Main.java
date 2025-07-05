@@ -12,11 +12,11 @@ public class Main {
         int countP3=0;
         int countP4=0;
         int countP5=0;
-        double p1=0;
-        double p2=0;
-        double p3=0;
-        double p4=0;
-        double p5=0;
+        double p1;
+        double p2;
+        double p3;
+        double p4;
+        double p5;
 
         for(int i=0;i<n;i++)
         {

@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner =new Scanner(System.in);
         String town =scanner.nextLine();
         double selling=Double.parseDouble(scanner.nextLine());
-        double total=0;
+        double total;
         switch(town)
         {
             case "Sofia":

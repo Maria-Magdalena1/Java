@@ -3,6 +3,7 @@
 ## Vending Machine
 
 ### Description
+
     Your task is to calculate the total purchase price from a vending machine. Until you receive "Start" you 
     will be given different coins that are being inserted into the machine.You have to sum them to have the total money
     inserted. There is a problem though. Your vending machine only works with 0.1, 0.2, 0.5, 1, and 2 coins. 

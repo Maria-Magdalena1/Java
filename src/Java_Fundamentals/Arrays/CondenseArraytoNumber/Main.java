@@ -5,16 +5,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        int [] numbers= Arrays.stream(scanner.nextLine().split(" "))
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = Arrays.stream(scanner.nextLine().split(" "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
-        if(numbers.length==1)
-        {
+        if (numbers.length == 1) {
             System.out.println(numbers[0]);
             return;
         }
-        while(numbers.length>1) {
+        while (numbers.length > 1) {
             int[] condensed = new int[numbers.length - 1];
             for (int position = 0; position < numbers.length - 1; position++) {
 
@@ -23,7 +22,7 @@ public class Main {
                 int sum = currentNumber + nextNumber;
                 condensed[position] = sum;
             }
-            numbers=condensed;
+            numbers = condensed;
         }
         System.out.println(numbers[0]);
     }

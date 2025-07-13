@@ -1,32 +1,22 @@
 package Java_Basics.FirstStepsInCoding.WeatherForecastPart2;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        double degrees=Double.parseDouble(scanner.nextLine());
-        if(degrees>=26 &&degrees<=35)
-        {
+        Scanner scanner = new Scanner(System.in);
+        double degrees = Double.parseDouble(scanner.nextLine());
+        if (degrees >= 26 && degrees <= 35) {
             System.out.println("Hot");
-        }
-        else if(degrees>=20.1 &&degrees<=25.9)
-        {
+        } else if (degrees >= 20.1 && degrees <= 25.9) {
             System.out.println("Warm");
-        }
-        else if(degrees>=15 &&degrees<=20)
-        {
+        } else if (degrees >= 15 && degrees <= 20) {
             System.out.println("Mild");
-        }
-        else if(degrees>=12 &&degrees<=14.9)
-        {
+        } else if (degrees >= 12 && degrees <= 14.9) {
             System.out.println("Cool");
-        }
-        else if(degrees>=5 &&degrees<=11.9)
-        {
+        } else if (degrees >= 5 && degrees <= 11.9) {
             System.out.println("Cold");
-        }
-        else
-        {
+        } else {
             System.out.println("unknown");
         }
 

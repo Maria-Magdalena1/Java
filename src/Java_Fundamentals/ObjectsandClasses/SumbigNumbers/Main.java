@@ -9,5 +9,6 @@ public class Main {
         BigInteger firstNumber = new BigInteger(scanner.nextLine());
         BigInteger secondNumber = new BigInteger(scanner.nextLine());
         BigInteger sum = firstNumber.add(secondNumber);
+        System.out.println(sum);
     }
 }

@@ -9,7 +9,7 @@ public class Ex1 {
         String packetType= scanner.nextLine();
         String vipDiscount=scanner.nextLine();
         int days=Integer.parseInt(scanner.nextLine());
-        double price=0;
+        double price;
         switch (city) {
             case "Bansko":
             case "Borovets":

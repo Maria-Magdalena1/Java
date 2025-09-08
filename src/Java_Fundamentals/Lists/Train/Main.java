@@ -22,7 +22,7 @@ public class Main {
                 int passengersToWagon = Integer.parseInt(input.split(" ")[0]);
                 for (int i = 0; i < wagons.size(); i++) {
                     int availableSpace = maxCapacity - wagons.get(i);//75-32
-                    if (availableSpace + passengersToWagon <= 75) {//30 +32<=75
+                    if (availableSpace + passengersToWagon <= maxCapacity) {//30 +32<=75
                         wagons.set(i, passengersToWagon + wagons.get(i));
                         break;
                     }

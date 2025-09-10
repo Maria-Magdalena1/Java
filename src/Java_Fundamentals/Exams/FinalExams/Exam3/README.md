@@ -1,10 +1,82 @@
 # Java Fundamentals
 
-## Exam 1
+## Exam 3
 
 ### Description
 #### Ex1 
+    You have plenty of free time, so you decide to write a program that conceals and reveals your received 
+    messages. Go ahead and type it in! On the first line of the input, you will receive the concealed message.
+    After that, until the "Reveal" command is given, you will receive strings with instructions for different 
+    operations that need to be performed upon the concealed message to interpret it and reveal its actual 
+    content. There are several types of instructions, split by ":|:" 
+    •	"InsertSpace:|:{index}": 
+        o	Inserts a single space at the given index. The given index will always be valid. 
+    •	"Reverse:|:{substring}": 
+        o	If the message contains the given substring, cut it out, reverse it and add it at the end of the message. 
+        o	If not, print "error". 
+        o	This operation should replace only the first occurrence of the given substring if there are two or more occurrences. 
+    •	"ChangeAll:|:{substring}:|:{replacement}": 
+        o	Changes all occurrences of the given substring with the replacement text. 
+
+    Input / Constraints 
+    •	On the first line, you will receive a string with a message. 
+    •	On the following lines, you will be receiving commands, split by ":|:".
+
+    Output 
+    •	After each set of instructions, print the resulting string. 
+    •	After the "Reveal" command is received, print this message: "You have a new text message: {message}"
 
 #### Ex2
+    The SoftUni Spelling Bee competition is here. But it`s not like any other Spelling Bee competition 
+    out there. It`s different and a lot more fun! You, of course, are a participant, and you are eager 
+    to show the competition that you are the best, so go ahead, learn the rules and win! On the first 
+    line of the input, you will be given a text string. To win the competition, you have to find all hidden 
+    word pairs, read them, and mark the ones that are mirror images of each other. First of all, you have to 
+    extract the hidden word pairs. Hidden word pairs are: 
+    •	Surrounded by "@" or "#" (only one of the two) in the following pattern #wordOne##wordTwo# or @wordOne@@wordTwo@ 
+    •	At least 3 characters long each (without the surrounding symbols). 
+    •	Made up of letters only. If the second word, spelled backward, is the same as the first word and vice versa 
+        (casing matters!), they are a match, and you have to store them somewhere. 
+    Examples of mirror words: #Part##traP# @leveL@@Level@ #sAw##wAs# 
+    •	If you don`t find any valid pairs, print: "No word pairs found!" 
+    •	If you find valid pairs print their count: "{valid pairs count} word pairs found!" 
+    •	If there are no mirror words, print: "No mirror words!" 
+    •	If there are mirror words print: 
+        "The mirror words are: {wordOne} <=> {wordtwo}, {wordOne} <=> {wordtwo}, … {wordOne} <=> {wordtwo}" 
+
+    Input / Constraints 
+    •	You will recive a string. 
+
+    Output 
+    •	Print the proper output messages in the proper cases as described in the problem description. 
+    •	If there are pairs of mirror words, print them in the end, each pair separated by ", ". 
+    •	Each pair of mirror word must be printed with " <=> " between the words.
 
 #### Ex3
+    You have just bought the latest and greatest computer game – Need for Seed III. Pick your favorite cars and 
+    drive them all you want! We know that you can't wait to start playing. On the first line of the standard input, 
+    you will receive an integer n – the number of cars that you can obtain. On the next n lines, the cars themselves 
+    will follow with their mileage and fuel available, separated by "|" in the following format: "{car}|{mileage}|{fuel}" 
+    Then, you will be receiving different commands, each on a new line, separated by " : ", until the "Stop" command is given: 
+    •	"Drive : {car} : {distance} : {fuel}": 
+        o	You need to drive the given distance, and you will need the given fuel to do that. 
+            If the car doesn't have enough fuel, print: "Not enough fuel to make that ride" 
+        o	If the car has the required fuel available in the tank, increase its mileage with the given distance, decrease its fuel 
+            with the given fuel, and print: "{car} driven for {distance} kilometers. {fuel} liters of fuel consumed." 
+        o	You like driving new cars only, so if a car's mileage reaches 100 000 km, remove it from the collection(s) and print: "Time to sell the {car}!" 
+    •	"Refuel : {car} : {fuel}": 
+        o	Refill the tank of your car. 
+        o	Each tank can hold a maximum of 75 liters of fuel, so if the given amount of fuel is more than you can 
+            fit in the tank, take only what is required to fill it up. 
+        o	Print a message in the following format: "{car} refueled with {fuel} liters" 
+    •	"Revert : {car} : {kilometers}": 
+        o	Decrease the mileage of the given car with the given kilometers and print the kilometers you have decreased it with 
+            in the following format: "{car} mileage decreased by {amount reverted} kilometers" 
+        o	If the mileage becomes less than 10 000km after it is decreased, just set it to 10 000km and DO NOT print anything. 
+    Upon receiving the "Stop" command, you need to print all cars in your possession in the following format: 
+    "{car} -> Mileage: {mileage} kms, Fuel in the tank: {fuel} lt." 
+
+    Input / Constraints 
+    •	The mileage and fuel of the cars will be valid, 32-bit integers, and will never be negative. 
+    •	The fuel and distance amounts in the commands will never be negative. 
+    •	The car names in the commands will always be valid cars in your possession.
